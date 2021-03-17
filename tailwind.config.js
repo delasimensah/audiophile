@@ -12,9 +12,11 @@ module.exports = {
         dark: "#101010",
       },
     },
-    // backgroundImage: () => ({
-    //   home: "url('/images/home-bg.jpg')",
-    // }),
+    backgroundImage: () => ({
+      hero: "url('/assets/home/desktop/image-hero.jpg')",
+      "hero-sm": "url('/assets/home/mobile/image-header.jpg')",
+      "hero-md": "url('/assets/home/tablet/image-header.jpg')",
+    }),
   },
   variants: {
     extend: {},
