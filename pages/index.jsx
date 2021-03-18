@@ -1,13 +1,16 @@
 import React from "react";
 
+//mui
+// import { Typography } from "@material-ui/core";
+
 //components
 import Layout from "../components/Layout";
-import { PrimaryButton } from "../components/Buttons";
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
     <Layout>
-      <div className="w-full h-screen bg-center bg-no-repeat bg-cover bg-hero-sm md:bg-hero-md lg:bg-hero"></div>
+      <Hero />
     </Layout>
   );
 };

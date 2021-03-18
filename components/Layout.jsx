@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
 
-      <div className="min-h-screen">{children}</div>
+      <div className="min-h-screen overflow-hidden">{children}</div>
 
       <Footer />
     </>
