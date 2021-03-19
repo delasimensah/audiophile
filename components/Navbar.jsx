@@ -35,7 +35,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="h-px bg-grey"></div>
+      <div className="h-px bg-gray-800"></div>
     </div>
   );
 };
