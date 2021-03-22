@@ -16,6 +16,12 @@ module.exports = {
       hero: "url('/assets/home/desktop/image-hero.jpg')",
       "hero-sm": "url('/assets/home/mobile/image-header.jpg')",
       "hero-md": "url('/assets/home/tablet/image-header.jpg')",
+      speaker: "url('/assets/home/desktop/image-speaker-zx7.jpg')",
+      "speaker-sm": "url('/assets/home/mobile/image-speaker-zx7.jpg')",
+      "speaker-md": "url('/assets/home/tablet/image-speaker-zx7.jpg')",
+      earphones: "url('/assets/home/desktop/image-earphones-yx1.jpg')",
+      "earphones-sm": "url('/assets/home/mobile/image-earphones-yx1.jpg')",
+      "earphones-md": "url('/assets/home/tablet/image-earphones-yx1.jpg')",
     }),
   },
   variants: {

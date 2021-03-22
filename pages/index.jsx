@@ -1,18 +1,17 @@
 import React from "react";
 
-//mui
-// import { Typography } from "@material-ui/core";
-
 //components
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Categories from "../components/Categories";
+import FeaturedProducts from "../components/FeaturedProducts";
 
 const Home = () => {
   return (
     <Layout>
       <Hero />
       <Categories />
+      <FeaturedProducts />
     </Layout>
   );
 };
