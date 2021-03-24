@@ -22,6 +22,9 @@ module.exports = {
       earphones: "url('/assets/home/desktop/image-earphones-yx1.jpg')",
       "earphones-sm": "url('/assets/home/mobile/image-earphones-yx1.jpg')",
       "earphones-md": "url('/assets/home/tablet/image-earphones-yx1.jpg')",
+      "info-img": "url('/assets/shared/desktop/image-best-gear.jpg')",
+      "info-img-sm": "url('/assets/shared/mobile/image-best-gear.jpg')",
+      "info-img-md": "url('/assets/shared/tablet/image-best-gear.jpg')",
     }),
   },
   variants: {
