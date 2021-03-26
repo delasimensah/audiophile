@@ -4,6 +4,7 @@ import {
   IoLogoInstagram,
   IoLogoTwitter,
 } from "react-icons/io5";
+import Link from "next/link";
 
 //mui
 import { Typography } from "@material-ui/core";
@@ -13,15 +14,35 @@ const Footer = () => {
     <div className="grid gap-10 text-white padding-h bg-dark lg:grid-cols-2">
       <div className="flex flex-col items-center space-y-10 md:block">
         <div className="h-[4px] w-28 bg-primary"></div>
-        <img src="/assets/shared/desktop/logo.svg" alt="" />
+        <Link href="/">
+          <a className="inline-block">
+            <img src="/assets/shared/desktop/logo.svg" alt="" />
+          </a>
+        </Link>
       </div>
 
       <div className="lg:pt-10 lg:flex lg:justify-end">
         <ul className="flex flex-col items-center justify-center space-y-5 text-sm tracking-widest uppercase md:justify-start md:flex-row md:space-x-5 md:space-y-0">
-          <li>home</li>
-          <li>headphones</li>
-          <li>speakers</li>
-          <li>earphones</li>
+          <li>
+            <Link href="/earphones">
+              <a className="uppercase hover:text-primary">home</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/earphones">
+              <a className="uppercase hover:text-primary">headphones</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/earphones">
+              <a className="uppercase hover:text-primary">speakers</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/earphones">
+              <a className="uppercase hover:text-primary">earphones</a>
+            </Link>
+          </li>
         </ul>
       </div>
 

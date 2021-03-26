@@ -25,6 +25,32 @@ module.exports = {
       "info-img": "url('/assets/shared/desktop/image-best-gear.jpg')",
       "info-img-sm": "url('/assets/shared/mobile/image-best-gear.jpg')",
       "info-img-md": "url('/assets/shared/tablet/image-best-gear.jpg')",
+      xx992:
+        "url('/assets/category-headphones/desktop/image-xx99-mark-two.jpg')",
+      "xx992-sm":
+        "url('/assets/category-headphones/mobile/image-xx99-mark-two.jpg')",
+      "xx992-md":
+        "url('/assets/category-headphones/tablet/image-xx99-mark-two.jpg')",
+      xx991:
+        "url('/assets/category-headphones/desktop/image-xx99-mark-one.jpg')",
+      "xx991-sm":
+        "url('/assets/category-headphones/mobile/image-xx99-mark-one.jpg')",
+      "xx991-md":
+        "url('/assets/category-headphones/tablet/image-xx99-mark-one.jpg')",
+      xx59: "url('/assets/category-headphones/desktop/image-xx59.jpg')",
+      "xx59-sm": "url('/assets/category-headphones/mobile/image-xx59.jpg')",
+      "xx59-md": "url('/assets/category-headphones/tablet/image-xx59.jpg')",
+      zx9: "url('/assets/category-speakers/desktop/image-zx9.jpg')",
+      "zx9-sm": "url('/assets/category-speakers/mobile/image-zx9.jpg')",
+      "zx9-md": "url('/assets/category-speakers/tablet/image-zx9.jpg')",
+      zx7: "url('/assets/category-speakers/desktop/image-zx7.jpg')",
+      "zx7-sm": "url('/assets/category-speakers/mobile/image-zx7.jpg')",
+      "zx7-md": "url('/assets/category-speakers/tablet/image-zx7.jpg')",
+      yx1: "url('/assets/category-earphones/desktop/image-yx1-earphones.jpg')",
+      "yx1-sm":
+        "url('/assets/category-earphones/mobile/image-yx1-earphones.jpg')",
+      "yx1-md":
+        "url('/assets/category-earphones/tablet/image-yx1-earphones.jpg')",
     }),
   },
   variants: {

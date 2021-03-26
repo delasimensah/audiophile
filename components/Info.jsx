@@ -12,7 +12,7 @@ const Info = () => {
         <div className="flex justify-center lg:justify-start">
           <Typography
             component="h2"
-            className=" md:w-[60%] lg:w-3/4 uppercase lg:text-[40px] leading-none font-semibold tracking-wider lg:text-left text-center text-[30px]"
+            className=" md:w-[60%] lg:w-3/4 uppercase lg:text-[40px] leading-tight font-semibold tracking-wider lg:text-left text-center text-[30px]"
           >
             Bringing you the <span className="text-primary">best</span> audio
             gear
@@ -31,7 +31,7 @@ const Info = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block lg:bg-info-img lg:h-[500px] w-[540px] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden"></div>
+      <div className="hidden lg:block lg:bg-info-img lg:h-[500px] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden"></div>
     </div>
   );
 };

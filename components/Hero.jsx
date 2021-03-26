@@ -30,7 +30,10 @@ const Hero = () => {
         </div>
 
         <div className="flex items-center justify-center pt-10 lg:justify-start">
-          <PrimaryButton />
+          <PrimaryButton
+            text="see product"
+            link="/headphones/xx99-mark-two-headphones"
+          />
         </div>
       </div>
     </div>

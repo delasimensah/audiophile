@@ -6,7 +6,7 @@ import { Typography } from "@material-ui/core";
 //components
 import { TertiaryButton } from "./Buttons";
 
-const CategoryCard = ({ src, title }) => {
+const CategoryCard = ({ src, title, link }) => {
   return (
     <div className="relative flex flex-col items-center">
       <img
@@ -22,7 +22,7 @@ const CategoryCard = ({ src, title }) => {
           {title}
         </Typography>
 
-        <TertiaryButton />
+        <TertiaryButton link={link} />
       </div>
     </div>
   );

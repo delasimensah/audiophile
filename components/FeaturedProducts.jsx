@@ -44,7 +44,7 @@ const FeaturedProducts = () => {
           </div>
 
           <div className="flex items-center justify-center pt-5 lg:justify-start">
-            <SecondaryButton />
+            <SecondaryButton link="/speakers/zx9-speaker" />
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ const FeaturedProducts = () => {
             ZX7 speaker
           </Typography>
 
-          <SecondaryButtonAlt />
+          <SecondaryButtonAlt link="/speakers/zx7-speaker" />
         </div>
       </div>
 
@@ -74,7 +74,7 @@ const FeaturedProducts = () => {
           </Typography>
 
           <div>
-            <SecondaryButtonAlt />
+            <SecondaryButtonAlt link="/earphones/yx1-earphones" />
           </div>
         </div>
       </div>
