@@ -5,13 +5,13 @@ import { useRouter } from "next/router";
 //mui
 import { Button } from "@material-ui/core";
 
-export const PrimaryButton = ({ text, link }) => {
+export const PrimaryButton = ({ text, link, onClick }) => {
   const { push } = useRouter();
 
   return (
     <Button
       className="px-6 py-3 text-sm text-white rounded-none bg-primary hover:bg-primaryLt "
-      onClick={() => push(link)}
+      onClick={link ? () => push(link) : onClick}
     >
       {text}
     </Button>

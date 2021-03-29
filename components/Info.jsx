@@ -5,7 +5,7 @@ import { Typography } from "@material-ui/core";
 
 const Info = () => {
   return (
-    <div className="grid gap-10 pt-10 pb-20 padding-h lg:grid-cols-2">
+    <div className="grid gap-10 pt-10 pb-20 padding-h lg:grid-cols-2 bg-greyLt">
       <div className="lg:hidden bg-info-img-sm md:bg-info-img-md h-[320px] md:h-[300px] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden"></div>
 
       <div className="flex flex-col justify-center space-y-5">

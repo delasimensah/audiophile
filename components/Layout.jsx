@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
 
-      <div className="min-h-screen overflow-hidden">{children}</div>
+      <div className="min-h-screen overflow-hidden bg-greyLt">{children}</div>
 
       <Info />
 
