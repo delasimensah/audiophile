@@ -24,17 +24,17 @@ const Footer = () => {
       <div className="lg:pt-10 lg:flex lg:justify-end">
         <ul className="flex flex-col items-center justify-center space-y-5 text-sm tracking-widest uppercase md:justify-start md:flex-row md:space-x-5 md:space-y-0">
           <li>
-            <Link href="/earphones">
+            <Link href="/">
               <a className="uppercase hover:text-primary">home</a>
             </Link>
           </li>
           <li>
-            <Link href="/earphones">
+            <Link href="/headphones">
               <a className="uppercase hover:text-primary">headphones</a>
             </Link>
           </li>
           <li>
-            <Link href="/earphones">
+            <Link href="/speakers">
               <a className="uppercase hover:text-primary">speakers</a>
             </Link>
           </li>

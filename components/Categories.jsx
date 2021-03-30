@@ -1,7 +1,11 @@
 import React from "react";
+import { Fade } from "react-reveal";
+
+//mui
+import { Typography } from "@material-ui/core";
 
 //components
-import CategoryCard from "./CategoryCard";
+import { TertiaryButton } from "./Buttons";
 
 const categories = [
   {
@@ -23,11 +27,31 @@ const categories = [
 
 const Categories = () => {
   return (
-    <div className="grid gap-20 py-40 md:gap-10 padding-h md:grid-cols-3">
-      {categories.map(({ src, title, link }, idx) => {
-        return <CategoryCard key={idx} src={src} title={title} link={link} />;
-      })}
-    </div>
+    <Fade left cascade distance="100px">
+      <div className="grid gap-20 py-40 md:gap-10 padding-h md:grid-cols-3">
+        {categories.map(({ src, title, link }, idx) => {
+          return (
+            <div className="relative flex flex-col items-center" key={idx}>
+              <img
+                src={src}
+                alt=""
+                className={`absolute w-40  ${
+                  title === "earphones" ? "-top-10" : "-top-12"
+                }`}
+              />
+
+              <div className="flex flex-col items-center justify-center w-full px-10 pt-24 pb-10 rounded-lg bg-grey">
+                <Typography className="font-bold tracking-wider uppercase">
+                  {title}
+                </Typography>
+
+                <TertiaryButton link={link} />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </Fade>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { Fade, Zoom } from "react-reveal";
 
 //mui
 import { Typography } from "@material-ui/core";
@@ -71,9 +72,11 @@ const category = () => {
   return (
     <Layout>
       <div className="flex items-center justify-center pt-40 pb-20 text-white bg-dark">
-        <Typography className="text-2xl font-semibold tracking-widest uppercase">
-          {category}
-        </Typography>
+        <Zoom>
+          <Typography className="text-2xl font-semibold tracking-widest uppercase">
+            {category}
+          </Typography>
+        </Zoom>
       </div>
 
       <div className="pt-20 space-y-20 padding-h">
