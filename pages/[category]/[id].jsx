@@ -11,6 +11,7 @@ import { Button, Typography } from "@material-ui/core";
 import Layout from "../../components/Layout";
 import Categories from "../../components/Categories";
 import { PrimaryButton } from "../../components/Buttons";
+import ProductImage from "../../components/ProductImage";
 
 const productDetails = () => {
   const [quantity, setQuantity] = useState(1);
@@ -38,8 +39,6 @@ const productDetails = () => {
 
   return (
     <Layout>
-      <div className="h-20"></div>
-
       <div className="pb-20 space-y-20 padding-h">
         <div className="pt-10">
           <Button
@@ -155,30 +154,9 @@ const productDetails = () => {
           </div>
         </Fade>
 
-        <div className=" md:h-[385px] lg:h-[592px] grid gap-5 md:grid-cols-2">
+        <div className=" md:h-[385px] lg:h-[500px] grid gap-5 md:grid-cols-2">
           {product?.gallery.map((image, idx) => {
-            return (
-              <div
-                key={idx}
-                className="overflow-hidden transition duration-500 ease-in-out rounded-lg cursor-pointer md:last-of-type:row-start-1 md:last-of-type:col-start-2 md:last-of-type:row-span-2 hover:scale-105"
-              >
-                <img
-                  src={image.mobile}
-                  alt=""
-                  className="w-full h-full md:hidden"
-                />
-                <img
-                  src={image.tablet}
-                  alt=""
-                  className="hidden w-full h-full md:block lg:hidden"
-                />
-                <img
-                  src={image.desktop}
-                  alt=""
-                  className="hidden w-full h-full lg:block"
-                />
-              </div>
-            );
+            return <ProductImage key={idx} image={image} />;
           })}
         </div>
 

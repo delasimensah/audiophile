@@ -2,6 +2,7 @@ import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../utils/muiTheme";
 import "../styles/globals.css";
+import "react-awesome-lightbox/build/style.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (

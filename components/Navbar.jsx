@@ -1,15 +1,23 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { IoCartOutline, IoMenuOutline } from "react-icons/io5";
+import { IoMenuOutline } from "react-icons/io5";
 import Link from "next/link";
+
+//components
+import Cart from "./Cart";
 
 const Navbar = () => {
   const { pathname } = useRouter();
-
   return (
     <div
-      className={`absolute top-0 w-full h-20 text-white padding-h ${
-        pathname === "/[category]/[id]" ? "bg-dark" : "bg-transparent"
+      className={`${
+        pathname === "/[category]/[id]" || pathname === "/checkout"
+          ? "sticky"
+          : "absolute"
+      } top-0 z-50 w-full h-20 text-white padding-h ${
+        pathname === "/[category]/[id]" || pathname === "/checkout"
+          ? "bg-dark"
+          : "bg-transparent"
       }`}
     >
       <div className="flex items-center h-full space-x-10 lg:space-x-0">
@@ -48,9 +56,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div>
-          <IoCartOutline className="w-7 h-7" />
-        </div>
+        <Cart />
       </div>
 
       {pathname !== "/[category]/[id]" && (
