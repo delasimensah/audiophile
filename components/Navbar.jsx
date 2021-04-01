@@ -8,13 +8,15 @@ import Cart from "./Cart";
 
 const Navbar = () => {
   const { pathname } = useRouter();
+  console.log(pathname);
+
   return (
     <div
       className={`${
         pathname === "/[category]/[id]" || pathname === "/checkout"
-          ? "sticky"
-          : "absolute"
-      } top-0 z-50 w-full h-20 text-white padding-h ${
+          ? "sticky h-16"
+          : "absolute h-20"
+      } top-0 z-50 w-full  text-white padding-h ${
         pathname === "/[category]/[id]" || pathname === "/checkout"
           ? "bg-dark"
           : "bg-transparent"
@@ -59,7 +61,7 @@ const Navbar = () => {
         <Cart />
       </div>
 
-      {pathname !== "/[category]/[id]" && (
+      {(pathname === "/[category]" || pathname === "/") && (
         <div className="h-px bg-gray-800"></div>
       )}
     </div>

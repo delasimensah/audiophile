@@ -3,6 +3,7 @@ import data from "../../utils/data.json";
 import { useRouter } from "next/router";
 import { IoAddOutline, IoRemoveOutline } from "react-icons/io5";
 import { Zoom, Fade } from "react-reveal";
+import addCommas from "../../utils/addCommasToPrice";
 
 //mui
 import { Button, Typography } from "@material-ui/core";
@@ -98,7 +99,7 @@ const productDetails = () => {
                 {product?.description}
               </Typography>
               <Typography className="text-2xl font-semibold tracking-widest">
-                $ {product?.price}
+                $ {product && addCommas(product.price)}
               </Typography>
 
               <div className="flex items-center space-x-5 ">
