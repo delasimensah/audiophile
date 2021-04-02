@@ -44,8 +44,9 @@ const productDetails = () => {
         <div className="pt-10">
           <Button
             variant="text"
-            className="text-lg font-light capitalize"
+            className="font-semibold capitalize hover:bg-transparent hover:text-primary"
             onClick={() => back()}
+            disableRipple
           >
             {" "}
             Go Back
@@ -155,9 +156,16 @@ const productDetails = () => {
           </div>
         </Fade>
 
-        <div className=" md:h-[385px] lg:h-[500px] grid gap-5 md:grid-cols-2">
+        <div className="xl:px-28 md:h-[385px] lg:h-[500px] grid gap-5 md:grid-cols-2">
           {product?.gallery.map((image, idx) => {
-            return <ProductImage key={idx} image={image} />;
+            return (
+              <ProductImage
+                key={idx}
+                image={image}
+                gallery={product.gallery}
+                idx={idx}
+              />
+            );
           })}
         </div>
 

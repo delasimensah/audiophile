@@ -11,13 +11,13 @@ import { PrimaryButton } from "./Buttons";
 const Cart = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const cart = [
-    {
-      id: 1,
-      image: "/assets/product-yx1-earphones/mobile/image-product.jpg",
-      name: "YX1 Wireless Earphones",
-      quantity: 2,
-      price: 599,
-    },
+    // {
+    //   id: 1,
+    //   image: "/assets/product-yx1-earphones/mobile/image-product.jpg",
+    //   name: "YX1 Wireless Earphones",
+    //   quantity: 2,
+    //   price: 599,
+    // },
   ];
 
   const total = cart.reduce((total, product) => {

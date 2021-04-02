@@ -8,7 +8,6 @@ import Cart from "./Cart";
 
 const Navbar = () => {
   const { pathname } = useRouter();
-  console.log(pathname);
 
   return (
     <div

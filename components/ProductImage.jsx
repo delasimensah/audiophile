@@ -4,7 +4,7 @@ import Lightbox from "react-awesome-lightbox";
 //mui
 import { Dialog } from "@material-ui/core";
 
-const ProductImage = ({ image }) => {
+const ProductImage = ({ image, gallery, idx }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -20,11 +20,11 @@ const ProductImage = ({ image }) => {
         className="overflow-hidden transition duration-500 ease-in-out rounded-lg cursor-pointer md:last-of-type:row-start-1 md:last-of-type:col-start-2 md:last-of-type:row-span-2 hover:scale-105"
         onClick={handleClickOpen}
       >
-        <img src={image.mobile} alt="" className="w-full h-full md:hidden" />
+        <img src={image.mobile} alt="" className="w-full md:hidden" />
         <img
           src={image.tablet}
           alt=""
-          className="hidden w-full h-full md:block lg:hidden"
+          className="hidden w-full md:block lg:hidden"
         />
         <img
           src={image.desktop}
@@ -34,7 +34,11 @@ const ProductImage = ({ image }) => {
       </div>
 
       <Dialog open={open} onClose={handleClose}>
-        <Lightbox image={image.desktop} onClose={handleClose} />
+        <Lightbox
+          images={gallery.map((img) => img.desktop)}
+          startIndex={idx}
+          onClose={handleClose}
+        />
       </Dialog>
     </>
   );
