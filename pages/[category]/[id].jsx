@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { IoAddOutline, IoRemoveOutline } from "react-icons/io5";
 import { Zoom, Fade } from "react-reveal";
 import addCommas from "../../utils/addCommasToPrice";
+import { useCart } from "../../contexts/CartContext";
 
 //mui
 import { Button, Typography } from "@material-ui/core";
@@ -16,6 +17,7 @@ import ProductImage from "../../components/ProductImage";
 
 const productDetails = () => {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
   const {
     back,
@@ -30,10 +32,6 @@ const productDetails = () => {
 
   const increase = () => {
     setQuantity(quantity + 1);
-  };
-
-  const addToCart = (item) => {
-    console.log("added to cart");
   };
 
   const product = data.find((data) => data.slug === id);
@@ -118,7 +116,18 @@ const productDetails = () => {
                   </Button>
                 </div>
 
-                <PrimaryButton text="add to cart" onClick={() => addToCart()} />
+                <PrimaryButton
+                  text="add to cart"
+                  onClick={() =>
+                    addToCart({
+                      id: product.id,
+                      name: product.name,
+                      image: product.image.mobile,
+                      quantity,
+                      price: product.price,
+                    })
+                  }
+                />
               </div>
             </div>
           </Fade>

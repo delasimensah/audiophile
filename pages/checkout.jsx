@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import addCommas from "../utils/addCommasToPrice";
+import { useCart } from "../contexts/CartContext";
 
 //mui
 import { Button, Typography } from "@material-ui/core";
@@ -11,20 +12,7 @@ import CheckoutModal from "../components/CheckoutModal";
 
 const checkout = () => {
   const { back } = useRouter();
-
-  const shipping = 0;
-
-  const vat = 0;
-
-  const cart = [
-    {
-      id: 1,
-      image: "/assets/product-yx1-earphones/mobile/image-product.jpg",
-      name: "YX1 Wireless Earphones",
-      quantity: 2,
-      price: 599,
-    },
-  ];
+  const { cart, shipping, vat } = useCart();
 
   const total = cart.reduce((total, product) => {
     return total + product.price * product.quantity;

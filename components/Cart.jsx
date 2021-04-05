@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoCartOutline, IoAddOutline, IoRemoveOutline } from "react-icons/io5";
 import addCommas from "../utils/addCommasToPrice";
+import { useCart } from "../contexts/CartContext";
 
 //mui
 import { Badge, Popover, Typography, Button } from "@material-ui/core";
@@ -10,15 +11,7 @@ import { PrimaryButton } from "./Buttons";
 
 const Cart = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const cart = [
-    // {
-    //   id: 1,
-    //   image: "/assets/product-yx1-earphones/mobile/image-product.jpg",
-    //   name: "YX1 Wireless Earphones",
-    //   quantity: 2,
-    //   price: 599,
-    // },
-  ];
+  const { cart, resetCart, increaseQuantity, decreaseQuantity } = useCart();
 
   const total = cart.reduce((total, product) => {
     return total + product.price * product.quantity;
@@ -70,6 +63,7 @@ const Cart = () => {
             className="underline capitalize hover:text-primary hover:bg-transparent"
             disableRipple
             disabled={cart.length === 0}
+            onClick={resetCart}
           >
             Remove all
           </Button>
@@ -104,7 +98,10 @@ const Cart = () => {
                 </div>
 
                 <div className="flex items-center bg-grey">
-                  <Button className="min-w-0 p-[6px]">
+                  <Button
+                    className="min-w-0 p-[6px]"
+                    onClick={() => decreaseQuantity(product.id)}
+                  >
                     <IoRemoveOutline className="" />
                   </Button>
 
@@ -114,7 +111,10 @@ const Cart = () => {
                     </Typography>
                   </div>
 
-                  <Button className="min-w-0 p-[6px]">
+                  <Button
+                    className="min-w-0 p-[6px]"
+                    onClick={() => increaseQuantity(product.id)}
+                  >
                     <IoAddOutline className="" />
                   </Button>
                 </div>

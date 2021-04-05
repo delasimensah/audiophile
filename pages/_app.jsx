@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
+import Provider from "../contexts/Provider";
 import theme from "../utils/muiTheme";
 import "../styles/globals.css";
 import "react-awesome-lightbox/build/style.css";
@@ -15,7 +16,9 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
 
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Provider>
+          <Component {...pageProps} />
+        </Provider>
       </ThemeProvider>
     </>
   );
