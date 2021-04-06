@@ -4,11 +4,18 @@ import addCommas from "../utils/addCommasToPrice";
 import { useCart } from "../contexts/CartContext";
 
 //mui
-import { Button, Typography } from "@material-ui/core";
+import {
+  Button,
+  Typography,
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+} from "@material-ui/core";
 
 //components
 import Layout from "../components/Layout";
 import CheckoutModal from "../components/CheckoutModal";
+import TextInput from "../components/TextInput";
 
 const checkout = () => {
   const { back } = useRouter();
@@ -34,11 +41,106 @@ const checkout = () => {
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[3fr,1fr]">
-          <div className="">
-            <div className="p-10 bg-white rounded-lg">
-              <Typography className="text-2xl font-semibold uppercase">
+          <div className="p-5 space-y-10 bg-white rounded-lg md:p-10">
+            <div className="">
+              <Typography
+                className="text-2xl font-semibold uppercase"
+                gutterBottom
+              >
                 Checkout
               </Typography>
+            </div>
+
+            <div className="space-y-5">
+              <Typography className="text-sm font-semibold tracking-wider uppercase text-primary">
+                Billing details
+              </Typography>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                <TextInput
+                  label="name"
+                  type="text"
+                  placeholder="Delasi Mensah"
+                />
+                <TextInput
+                  label="email address"
+                  type="email"
+                  placeholder="delasi@mail.com"
+                />
+                <TextInput
+                  label="phone number"
+                  type="tel"
+                  placeholder="+1 202-555-0136"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-5">
+              <Typography className="text-sm font-semibold tracking-wider uppercase text-primary">
+                Shipping info
+              </Typography>
+
+              <TextInput
+                label="address"
+                type="text"
+                placeholder="1137 Williams Avenue"
+              />
+
+              <div className="grid gap-5 md:grid-cols-2">
+                <TextInput label="ZIP Code" type="number" placeholder="10001" />
+                <TextInput label="city" type="text" placeholder="New York" />
+                <TextInput
+                  label="country"
+                  type="text"
+                  placeholder="United States"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-5">
+              <Typography className="text-sm font-semibold tracking-wider uppercase text-primary">
+                payment details
+              </Typography>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                <div>
+                  <Typography className="text-sm font-semibold tracking-wide capitalize">
+                    payment Method
+                  </Typography>
+                </div>
+
+                <RadioGroup
+                  name="payment method"
+                  defaultValue="e-Money"
+                  className="space-y-5"
+                >
+                  <FormControlLabel
+                    value="e-Money"
+                    control={<Radio color="primary" />}
+                    label="e-Money"
+                    className="p-[3px] m-0 border rounded-lg border-gray-500"
+                  />
+                  <FormControlLabel
+                    value="Cash"
+                    control={<Radio color="primary" />}
+                    label="Cash on Delivery"
+                    className="p-[3px] m-0 border rounded-lg border-gray-500"
+                  />
+                </RadioGroup>
+              </div>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                <TextInput
+                  label="e-Money Number"
+                  type="number"
+                  placeholder="238521993"
+                />
+                <TextInput
+                  label="e-Money Pin"
+                  type="number"
+                  placeholder="6891"
+                />
+              </div>
             </div>
           </div>
 
