@@ -10,7 +10,7 @@ import { PrimaryButton } from "./Buttons";
 const Hero = () => {
   return (
     <div className="flex items-center w-full h-screen pt-10 bg-center bg-no-repeat bg-cover bg-hero-sm md:bg-hero-md lg:bg-hero padding-h">
-      <Fade left cascade>
+      <Fade distance="100px" left cascade>
         <div className="space-y-5 text-white lg:w-1/2">
           <Typography
             variant="h6"
