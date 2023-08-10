@@ -18,15 +18,13 @@ const FeaturedProducts = () => {
         />
 
         <div className="z-50 flex items-end justify-center pt-20 md:pt-20 lg:pt-0">
-          <Zoom>
-            <div className="w-40 overflow-hidden md:w-60 lg:w-72">
-              <img
-                src="/assets/home/desktop/image-speaker-zx9.png"
-                alt=""
-                className=""
-              />
-            </div>
-          </Zoom>
+          <div className="w-40 overflow-hidden md:w-60 lg:w-72">
+            <img
+              src="/assets/home/desktop/image-speaker-zx9.png"
+              alt=""
+              className=""
+            />
+          </div>
         </div>
 
         <Fade left cascade distance="90px">

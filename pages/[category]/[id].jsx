@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "../../utils/data.json";
 import { useRouter } from "next/router";
 import { IoAddOutline, IoRemoveOutline } from "react-icons/io5";
-import { Zoom, Fade } from "react-reveal";
+import { Fade } from "react-reveal";
 import addCommas from "../../utils/addCommasToPrice";
 import { useCart } from "../../contexts/CartContext";
 
@@ -52,27 +52,25 @@ const productDetails = () => {
         </div>
 
         <div className="grid gap-10 md:grid-cols-2">
-          <Zoom>
-            <div className="h-[327px] md:h-[480px] lg:h-[560px]">
-              <img
-                src={product?.image.mobile}
-                alt=""
-                className="w-full h-full md:hidden"
-              />
-              <img
-                src={product?.image.tablet}
-                alt=""
-                className="hidden w-full h-full md:block lg:hidden"
-              />
-              <img
-                src={product?.image.desktop}
-                alt=""
-                className="hidden w-full h-full lg:block"
-              />
-            </div>
-          </Zoom>
+          <div className="h-[327px] md:h-[480px] lg:h-[560px]">
+            <img
+              src={product?.image.mobile}
+              alt=""
+              className="w-full h-full md:hidden"
+            />
+            <img
+              src={product?.image.tablet}
+              alt=""
+              className="hidden w-full h-full md:block lg:hidden"
+            />
+            <img
+              src={product?.image.desktop}
+              alt=""
+              className="hidden w-full h-full lg:block"
+            />
+          </div>
 
-          <Fade duration={2000}>
+          <Fade distance="100px" duration={2000}>
             <div className="flex flex-col justify-center space-y-5">
               {product?.recent && (
                 <Typography
@@ -133,7 +131,7 @@ const productDetails = () => {
           </Fade>
         </div>
 
-        <Fade left cascade>
+        <Fade distance="100px" left cascade>
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="space-y-5">
               <Typography className="text-3xl font-semibold tracking-wide uppercase">
@@ -179,11 +177,9 @@ const productDetails = () => {
         </div>
 
         <div className="space-y-10">
-          <Zoom>
-            <Typography className="text-3xl font-semibold tracking-wide text-center uppercase">
-              You may also like
-            </Typography>
-          </Zoom>
+          <Typography className="text-3xl font-semibold tracking-wide text-center uppercase">
+            You may also like
+          </Typography>
 
           <Fade bottom cascade distance="90px">
             <div className="grid gap-10 md:gap-5 md:grid-cols-3">

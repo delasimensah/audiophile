@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, Zoom } from "react-reveal";
+import { Fade } from "react-reveal";
 
 //mui
 import { Typography } from "@material-ui/core";
@@ -7,9 +7,7 @@ import { Typography } from "@material-ui/core";
 const Info = () => {
   return (
     <div className="grid gap-10 pt-10 pb-20 padding-h lg:grid-cols-2 bg-greyLt">
-      <Zoom>
-        <div className="lg:hidden bg-info-img-sm md:bg-info-img-md h-[320px] md:h-[300px] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden"></div>
-      </Zoom>
+      <div className="lg:hidden bg-info-img-sm md:bg-info-img-md h-[320px] md:h-[300px] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden"></div>
 
       <Fade left cascade distance="90px">
         <div className="flex flex-col justify-center space-y-5">
@@ -37,9 +35,7 @@ const Info = () => {
         </div>
       </Fade>
 
-      <Zoom>
-        <div className="hidden lg:block lg:bg-info-img lg:h-[500px] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden"></div>
-      </Zoom>
+      <div className="hidden lg:block lg:bg-info-img lg:h-[500px] bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden"></div>
     </div>
   );
 };
